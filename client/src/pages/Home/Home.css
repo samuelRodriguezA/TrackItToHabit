@@ -18,12 +18,18 @@ body {
     padding: 0 20px;
 }
 
-.header{
+.header {
     margin: 0 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.header .buttons .btn {
+    background: #f4f4f4;
+    color: #333;
+}
+
 header {
     background: #333;
     padding: 20px 0;
@@ -39,7 +45,7 @@ header p {
     color: #888;
 }
 
-section {
+.section-home {
     padding: 50px 0 30px 0;
 }
 
@@ -54,12 +60,17 @@ ul {
 
 ul li {
     margin-bottom: 10px;
-    margin-left: 5% ;
-}
-
-#get-started .container p{
     margin-left: 5%;
 }
+
+#get-started .container p {
+    margin-left: 5%;
+}
+
+#get-started .buttons {
+    margin: 0 5%;
+}
+
 
 .buttons .btn {
     display: inline-block;
@@ -67,13 +78,11 @@ ul li {
     background: #333;
     color: #f4f4f4;
     text-decoration: none;
-    margin-right: 10px;
-    border-radius: 16px;
-    margin-top: 20px;
+    margin: 10px;
+    border-radius: 10px;
 }
-#get-started .buttons{
-    margin: 0 5%;
-}
+
+
 
 
 

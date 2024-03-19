@@ -3,8 +3,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import {ProtectedRoute } from  './components/protectedRoute';
 import {auth} from './firebase'
 
-import {Home} from "./pages/home";
-import {Login} from "./pages/login";
+import {Home} from "./pages/Home/home";
+import {Login} from "./pages/Signin/login";
 import {Dashboard} from "./pages/dashboard";
 
 import "./App.css"

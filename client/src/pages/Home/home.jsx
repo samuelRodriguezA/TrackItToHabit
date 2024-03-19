@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
-import { home_img } from '../assets/homeimg.jpg'
 export const Home = () => {
   return (
     <>
@@ -26,13 +25,13 @@ export const Home = () => {
           </p>
         </div>
       </div> */}
-      <section id="hero">
+      <section id="hero" className="section-home">
         <div class="container">
           <h2>Track Your Habits, Achieve Your Goals</h2>
           <p>TrackItOhabit helps you build better habits and reach your goals by making habit tracking simple and effective.</p>
         </div>
       </section>
-      <section id="features">
+      <section id="features" className="section-home">
         <div class="container">
           <h2>Key Features:</h2>
           <ul>
@@ -43,19 +42,17 @@ export const Home = () => {
             <li>Secure and Private: Your data is encrypted and securely stored for your peace of mind.</li>
           </ul>
         </div>
-        <img src={home_img}></img>
       </section>
-      <section id="get-started">
+      <section id="get-started" className="section-home">
         <div class="container">
           <h2>Get Started Today!</h2>
           <p>Start your journey to a healthier, happier you with TrackItOhabit.</p>
           <div class="buttons">
-            <a href="signup" class="btn">Sign Up</a>
-            <Link to="/login" className="btn">Log In</Link>
+            <Link to="/login" className="btn">Sign Up </Link>
           </div>
         </div>
       </section>
-      <section id="stay-connected">
+      <section id="stay-connected" className="section-home">
         <div class="container">
           <h2>Stay Connected:</h2>
           <div class="social-links">
