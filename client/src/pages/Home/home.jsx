@@ -4,7 +4,7 @@ export const Home = () => {
   return (
     <>
       <header>
-        <div class="header">
+        <div className="header">
           <div>
             <h1>TrackItTohabit</h1>
             <p>Welcome to TrackItTohabit - Your Personal Habit Tracker</p>
@@ -26,13 +26,13 @@ export const Home = () => {
         </div>
       </div> */}
       <section id="hero" className="section-home">
-        <div class="container">
+        <div className="container">
           <h2>Track Your Habits, Achieve Your Goals</h2>
           <p>TrackItOhabit helps you build better habits and reach your goals by making habit tracking simple and effective.</p>
         </div>
       </section>
       <section id="features" className="section-home">
-        <div class="container">
+        <div className="container">
           <h2>Key Features:</h2>
           <ul>
             <li>Easy Habit Tracking: Log your habits effortlessly with our intuitive interface.</li>
@@ -44,26 +44,26 @@ export const Home = () => {
         </div>
       </section>
       <section id="get-started" className="section-home">
-        <div class="container">
+        <div className="container">
           <h2>Get Started Today!</h2>
           <p>Start your journey to a healthier, happier you with TrackItOhabit.</p>
-          <div class="buttons">
+          <div className="buttons">
             <Link to="/login" className="btn">Sign Up </Link>
           </div>
         </div>
       </section>
       <section id="stay-connected" className="section-home">
-        <div class="container">
+        <div className="container">
           <h2>Stay Connected:</h2>
-          <div class="social-links">
-            <a href="#" class="social-link">Facebook</a>
-            <a href="#" class="social-link">Twitter</a>
-            <a href="#" class="social-link">Instagram</a>
+          <div className="social-links">
+            <a href="#" className="social-link">Facebook</a>
+            <a href="#" className="social-link">Twitter</a>
+            <a href="#" className="social-link">Instagram</a>
           </div>
         </div>
       </section>
       <footer>
-        <div class="container">
+        <div className="container">
           <ul>
             <li><a href="privacy-policy">Privacy Policy</a></li>
             <li><a href="terms-of-service">Terms of Service</a></li>
