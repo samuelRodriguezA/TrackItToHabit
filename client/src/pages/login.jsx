@@ -43,9 +43,7 @@ export const Login = (user) => {
     const handleEmailChange = (event) => setEmail(event.target.value);
     const handlePasswordChange = (event) => setPassword(event.target.value);
 
-    if (user){
-        return <Navigate to='/dashboard'></Navigate>
-    }
+    
     return (
         <section>
             <form>
