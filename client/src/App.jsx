@@ -1,16 +1,16 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
-import {ProtectedRoute } from  './components/protectedRoute';
-import {auth} from './firebase'
+import { ProtectedRoute } from './components/protectedRoute';
+import { auth } from './firebase'
 
-import {Home} from "./pages/Home/home";
-import {Login} from "./pages/Signin/login";
-import {Dashboard} from "./pages/dashboard";
+import { Home } from "./pages/Home/home";
+import { Login } from "./pages/Signin/login";
+import { Dashboard } from "./pages/Dashboard/dashboard";
 
 import "./App.css"
 import { useEffect, useState } from "react";
 
-function App(){
+function App() {
   const [user, setUser] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   useEffect(() => {
@@ -24,22 +24,22 @@ function App(){
       setIsFetching(false);
 
     });
-return () => unsuscribe(); 
-}, []);
+    return () => unsuscribe();
+  }, []);
 
-if (isFetching){
-  return <h2>Loading...</h2>
-}
-  return(
+  if (isFetching) {
+    return <h2>Loading...</h2>
+  }
+  return (
     <BrowserRouter>
-    <Routes>
-      <Route index path='/' element={<Home ></Home>}/>
-      <Route index path='/login' element={<Login user={user}></Login>}/>
-      <Route index path='/dashboard' element={
-      <ProtectedRoute user={user}>
-        <Dashboard />
-      </ProtectedRoute>}/>
-    </Routes>
+      <Routes>
+        <Route index path='/' element={<Home ></Home>} />
+        <Route index path='/login' element={<Login user={user}></Login>} />
+        <Route index path='/dashboard' element={
+          <ProtectedRoute user={user}>
+            <Dashboard />
+          </ProtectedRoute>} />
+      </Routes>
     </BrowserRouter>
   )
 }
