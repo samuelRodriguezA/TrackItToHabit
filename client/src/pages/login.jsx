@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@firebase/auth';
 import { auth } from '../firebase';
-import { Navigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
-export const Login = (user) => {
+export const Login = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isSignUpActive, setIsSignUpActive] = useState(true);
@@ -15,9 +16,8 @@ export const Login = (user) => {
     const handleSignup = () => {
         if (!email || !password) return;
         createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
+            .then(() => {
+                navigate("/dashboard");
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -29,9 +29,8 @@ export const Login = (user) => {
     const handleSignIn = () => {
         if (!email || !password) return;
         signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
+            .then(() => {
+                navigate("/dashboard");
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -72,3 +71,4 @@ export const Login = (user) => {
         </section>
     );
 };
+
