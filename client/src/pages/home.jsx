@@ -1,22 +1,79 @@
 import { Link } from 'react-router-dom';
+import './Home.css';
+import { home_img } from '../assets/homeimg.jpg'
 export const Home = () => {
-    return (
-        <section>
-            <div className="home-container">
-            <header className="header">
-        <h1 className="title">TrackItToHabit</h1>
-        <div className="menu">
-          <Link to="/login" className="menu-item">Log In or Create an account</Link>
+  return (
+    <>
+      <header>
+        <div class="header">
+          <div>
+            <h1>TrackItTohabit</h1>
+            <p>Welcome to TrackItTohabit - Your Personal Habit Tracker</p>
+          </div>
+          <div className="buttons">
+            <Link to="/login" className="btn">Log In</Link>
+            <Link to="/login" className="btn">Create Account</Link>
+          </div>
         </div>
       </header>
-      <div className="description">
-        <p>
-          TrackItToHabit is a habit tracker app designed to help you build and maintain healthy habits. 
-          With features like daily tracking, goal setting, and habit streaks, it's the perfect tool 
-          to stay motivated and accountable on your journey to a better you.
-        </p>
-      </div>
-    </div>
-        </section>
-    );
+
+      {/* <div className="home-container">
+        <div className="description">
+          <p>
+            TrackItToHabit is a habit tracker app designed to help you build and maintain healthy habits.
+            With features like daily tracking, goal setting, and habit streaks, it's the perfect tool
+            to stay motivated and accountable on your journey to a better you.
+          </p>
+        </div>
+      </div> */}
+      <section id="hero">
+        <div class="container">
+          <h2>Track Your Habits, Achieve Your Goals</h2>
+          <p>TrackItOhabit helps you build better habits and reach your goals by making habit tracking simple and effective.</p>
+        </div>
+      </section>
+      <section id="features">
+        <div class="container">
+          <h2>Key Features:</h2>
+          <ul>
+            <li>Easy Habit Tracking: Log your habits effortlessly with our intuitive interface.</li>
+            <li>Customizable Goals: Set personalized goals and milestones to stay motivated.</li>
+            <li>Insightful Analytics: Gain valuable insights into your habits and progress over time.</li>
+            <li>Daily Reminders: Stay on track with customizable reminders to complete your habits.</li>
+            <li>Secure and Private: Your data is encrypted and securely stored for your peace of mind.</li>
+          </ul>
+        </div>
+        <img src={home_img}></img>
+      </section>
+      <section id="get-started">
+        <div class="container">
+          <h2>Get Started Today!</h2>
+          <p>Start your journey to a healthier, happier you with TrackItOhabit.</p>
+          <div class="buttons">
+            <a href="signup" class="btn">Sign Up</a>
+            <Link to="/login" className="btn">Log In</Link>
+          </div>
+        </div>
+      </section>
+      <section id="stay-connected">
+        <div class="container">
+          <h2>Stay Connected:</h2>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <ul>
+            <li><a href="privacy-policy">Privacy Policy</a></li>
+            <li><a href="terms-of-service">Terms of Service</a></li>
+          </ul>
+          <p>&copy; 2024 TrackItOhabit. All rights reserved.</p>
+        </div>
+      </footer>
+    </>
+  );
 };

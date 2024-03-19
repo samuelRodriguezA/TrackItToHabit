@@ -33,8 +33,8 @@ if (isFetching){
   return(
     <BrowserRouter>
     <Routes>
-      <Route index path='/' element={<Home ></Home>}/>
-      <Route index path='/login' element={<Login user={user}></Login>}/>
+      <Route index path='/' element={<Home/>}/>
+      <Route index path='/login' element={<Login user={user}}/>
       <Route index path='/dashboard' element={
       <ProtectedRoute user={user}>
         <Dashboard />
