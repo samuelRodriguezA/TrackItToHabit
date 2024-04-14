@@ -11,7 +11,7 @@ export const sidebarLinks = [
         imgUrl: 'icons/upcoming.svg',
     },
     {
-        label: 'Add Hobit',
+        label: 'Add Habit',
         route: '/addhabit',
         imgUrl: 'icons/add-personal.svg',
     },
