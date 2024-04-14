@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Placeholder content for pricing data
 const pricing = [
   {
     id: 1,
@@ -36,8 +35,8 @@ const Section = ({ children }: { children: React.ReactNode }) => (
 
 const Heading = ({ tag, title }: { tag: string; title: string }) => (
   <div>
-    <h2 className="text-3xl font-bold text-white text-align: center">{tag}</h2>
-    <h1 className="text-5xl font-bold text-white text-align: center pb-100">{title}</h1>
+    <h2 className="text-3xl font-bold text-white text-center pt-10">{tag}</h2>
+    <h1 className="text-5xl font-bold text-white pb-10 text-center">{title}</h1>
   </div>
 );
 
@@ -97,7 +96,7 @@ const PricingList = () => (
 const Pricing = () => (
   <Section>
     <div className="relative">
-      <Heading tag="Get started with Brainwave" title="Pay once, use forever" />
+      <Heading tag="Get started with Track It To Habit" title="Pay once, use forever" />
       <PricingList />
     </div>
     <div className="flex justify-center mt-10">

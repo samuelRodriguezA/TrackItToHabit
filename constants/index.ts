@@ -16,8 +16,8 @@ export const sidebarLinks = [
         imgUrl: 'icons/add-personal.svg',
     },
     {
-        label: 'Pricing',
-        route: '/pricing',
+        label: 'Pricings',
+        route: '/pricings',
         imgUrl: 'icons/pricing-icon.svg',
     },
 ]
