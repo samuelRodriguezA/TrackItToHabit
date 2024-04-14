@@ -9,6 +9,7 @@ import { CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid'
 import { EventSourceInput } from '@fullcalendar/core/index.js'
 
 
+
 interface Event {
   title: string;
   start: Date | string;
@@ -105,17 +106,18 @@ export default function Home() {
   return (
     <>
       <nav className="flex justify-between mb-12 border-b border-violet-100 p-4">
-        <h1 className="font-bold text-2xl text-gray-700">Calendar</h1>
+        <h1 className="font-bold text-2xl text-white">Calendar</h1>
       </nav>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="grid grid-cols-10">
-          <div className="col-span-8">
+          <div className="col-span-8 bg-white p-10 rounded-xl">
             <FullCalendar
               plugins={[
                 dayGridPlugin,
                 interactionPlugin,
                 timeGridPlugin
               ]}
+
               headerToolbar={{
                 left: 'prev,next today',
                 center: 'title',
@@ -132,11 +134,11 @@ export default function Home() {
               eventClick={(data) => handleDeleteModal(data)}
             />
           </div>
-          <div id="draggable-el" className="ml-8 w-full border-2 p-2 rounded-md mt-16 lg:h-1/2 bg-violet-50">
-            <h1 className="font-bold text-lg text-center">Drag Event</h1>
+          <div id="draggable-el" className="ml-8 w-full p-2 rounded-xl mt-16 lg:h-1/2 bg-dark-1">
+            <h1 className="font-bold text-lg text-center text-white">Drag Event</h1>
             {events.map(event => (
               <div
-                className="fc-event border-2 p-1 m-2 w-full rounded-md ml-auto text-center bg-white"
+                className="fc-event border-2 p-1 m-2 w-full rounded-md ml-auto text-center bg-blue-1"
                 title={event.title}
                 key={event.id}
               >
@@ -222,7 +224,7 @@ export default function Home() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+              <div className="fixed inset-0 bg-blue-500 bg-opacity-75 transition-opacity" />
             </Transition.Child>
 
             <div className="fixed inset-0 z-10 overflow-y-auto">
