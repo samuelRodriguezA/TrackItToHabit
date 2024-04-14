@@ -32,7 +32,7 @@ const NavbarLanding = () => {
                               <NavigationMenuItem>
                                   <Link href="/aboutus" legacyBehavior passHref>
                                       <NavigationMenuLink>
-                                          <div className="ml-4 mr-4">About Us</div>
+                                          <div className=" mr-4 ml-auto">About Us</div>
                                       </NavigationMenuLink>
                                   </Link>
                               </NavigationMenuItem>
@@ -53,7 +53,14 @@ const NavbarLanding = () => {
                               <NavigationMenuItem>
                                   <Link href="/home" legacyBehavior passHref>
                                       <NavigationMenuLink>
-                                          <div className="ml-4 mr-16">Dashboard</div>
+                                          <div className="ml-4 mr-4">Dashboard</div>
+                                      </NavigationMenuLink>
+                                  </Link>
+                              </NavigationMenuItem>
+                              <NavigationMenuItem>
+                                  <Link href="/pricings" legacyBehavior passHref>
+                                      <NavigationMenuLink>
+                                          <div className="ml-4 mr-20">Pricing</div>
                                       </NavigationMenuLink>
                                   </Link>
                               </NavigationMenuItem>
