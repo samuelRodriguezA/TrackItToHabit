@@ -15,4 +15,9 @@ export const sidebarLinks = [
         route: '/addhabit',
         imgUrl: 'icons/add-personal.svg',
     },
+    {
+        label: 'Pricing',
+        route: '/pricing',
+        imgUrl: 'icons/pricing-icon.svg',
+    },
 ]
