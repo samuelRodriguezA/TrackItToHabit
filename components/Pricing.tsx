@@ -8,6 +8,7 @@ const pricing = [
     description: 'Basic description',
     price: '$0',
     features: ['Log In', 'Calendar', 'Sync Locally'],
+    href: '/calendar'
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ const pricing = [
     description: 'Get More Perks and receibe notifications to your phone',
     price: '$5',
     features: ['Log In', 'Calendar', 'Notifications'],
+    href: 'https://buy.stripe.com/test_fZe6pS0SpgPAcb69AB'
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const pricing = [
     description: 'Use Our App for your company',
     price: '$10',
     features: ['Sync With Teams', 'Calendar', 'Notiications'],
+    href: 'https://buy.stripe.com/test_eVaaG8cB77f05MI4gg'
   },
 ];
 
@@ -34,18 +37,18 @@ const Section = ({ children }: { children: React.ReactNode }) => (
 const Heading = ({ tag, title }: { tag: string; title: string }) => (
   <div>
     <h2 className="text-3xl font-bold text-white text-align: center">{tag}</h2>
-    <h1 className="text-5xl font-bold text-white text-align: center padding-bottom: 100px">{title}</h1>
+    <h1 className="text-5xl font-bold text-white text-align: center pb-100">{title}</h1>
   </div>
 );
 
 const Button = ({ children, href }: { children: React.ReactNode; href: string }) => (
-  <a
-    className="inline-block px-6 py-3 mt-6 text-xs font-bold tracking-wider uppercase border-b border-transparent bg-gray-800 hover:bg-gray-700 text-white"
-    href={href}
-  >
-    {children}
-  </a>
-);
+    <a
+      className="inline-block px-6 py-3 mt-6 text-xs font-bold tracking-wider uppercase border-b border-transparent bg-gray-800 hover:bg-gray-700 text-white"
+      href={href}
+    >
+      {children}
+    </a>
+  );
 
 const PricingList = () => (
   <div className="flex flex-wrap gap-4 justify-center">
@@ -64,9 +67,10 @@ const PricingList = () => (
             </>
           )}
         </div>
-        <Button href={item.price ? '/pricing' : 'mailto:contact@jsmastery.pro'}>
-          {item.price ? 'Get started' : 'Contact us'}
-        </Button>
+        <Button href={item.href}>
+  {item.price ? 'Get started' : 'Contact us'}
+</Button>
+
         <ul className="text-left mt-6">
           {item.features.map((feature, index) => (
             <li key={index} className="flex items-start py-1">
@@ -97,12 +101,13 @@ const Pricing = () => (
       <PricingList />
     </div>
     <div className="flex justify-center mt-10">
-      <a
-        className="text-xs font-bold tracking-wider uppercase border-b border-transparent text-white text-align: center hover:border-gray-300"
-        href="/home"
-      >
-        Go to Calendar
-      </a>
+    <a
+  href="/calendar"
+  className="text-xs font-bold tracking-wider uppercase border-b border-transparent text-white text-align: center hover:border-gray-300"
+>
+  Go to Calendar
+</a>
+
     </div>
   </Section>
 );

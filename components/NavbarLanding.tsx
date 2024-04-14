@@ -53,7 +53,14 @@ const NavbarLanding = () => {
                               <NavigationMenuItem>
                                   <Link href="/home" legacyBehavior passHref>
                                       <NavigationMenuLink>
-                                          <div className="ml-4 mr-16">Dashboard</div>
+                                          <div className="ml-4 mr-4">Dashboard</div>
+                                      </NavigationMenuLink>
+                                  </Link>
+                              </NavigationMenuItem>
+                              <NavigationMenuItem>
+                                  <Link href="/pricing" legacyBehavior passHref>
+                                      <NavigationMenuLink>
+                                          <div className="ml-4 mr-16">Pricing</div>
                                       </NavigationMenuLink>
                                   </Link>
                               </NavigationMenuItem>
