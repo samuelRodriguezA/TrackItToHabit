@@ -1,9 +1,9 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 
 interface AddHabitProps {
-  onCreate: (event: { title: string; description: string; startDate: string; frequency: string; endDate?: string; id: string }) => void;
+  onCreate?: (event: { title: string; description: string; startDate: string; frequency: string; endDate?: string; id: string }) => void;
 }
 
 const AddHabit: React.FC<AddHabitProps> = ({ onCreate }) => {
