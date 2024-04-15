@@ -18,13 +18,17 @@ interface Event {
 }
 
 export default function Home() {
+  
   const [events, setEvents] = useState([
     { title: 'Gym', id: '1' },
     { title: 'Running', id: '2' },
     { title: 'Reading', id: '3' },
-
-  ])
-  const [allEvents, setAllEvents] = useState<Event[]>([])
+  ]
+)
+const [allEvents, setAllEvents] = useState(() => {
+  const events = localStorage.getItem('events');
+  return events ? JSON.parse(events) : [];
+});
   const [showModal, setShowModal] = useState(false)
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [idToDelete, setIdToDelete] = useState<number | null>(null)
@@ -36,6 +40,8 @@ export default function Home() {
   })
 
   useEffect(() => {
+    localStorage.setItem('events', JSON.stringify(allEvents));
+
     let draggableEl = document.getElementById('draggable-el')
     if (draggableEl) {
       new Draggable(draggableEl, {
@@ -48,7 +54,7 @@ export default function Home() {
         }
       })
     }
-  }, [])
+  }, [allEvents])
 
   function handleDateClick(arg: { date: Date, allDay: boolean }) {
     setNewEvent({ ...newEvent, start: arg.date, allDay: arg.allDay, id: new Date().getTime() })
