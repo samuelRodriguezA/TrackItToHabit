@@ -19,11 +19,10 @@ interface Event {
 
 export default function Home() {
   const [events, setEvents] = useState([
-    { title: 'event 1', id: '1' },
-    { title: 'event 2', id: '2' },
-    { title: 'event 3', id: '3' },
-    { title: 'event 4', id: '4' },
-    { title: 'event 5', id: '5' },
+    { title: 'Gym', id: '1' },
+    { title: 'Running', id: '2' },
+    { title: 'Reading', id: '3' },
+
   ])
   const [allEvents, setAllEvents] = useState<Event[]>([])
   const [showModal, setShowModal] = useState(false)
@@ -56,10 +55,12 @@ export default function Home() {
     setShowModal(true)
   }
 
+
   function addEvent(data: DropArg) {
     const event = { ...newEvent, start: data.date.toISOString(), title: data.draggedEl.innerText, allDay: data.allDay, id: new Date().getTime() }
     setAllEvents([...allEvents, event])
   }
+
 
   function handleDeleteModal(data: { event: { id: string } }) {
     setShowDeleteModal(true)
@@ -90,6 +91,7 @@ export default function Home() {
       title: e.target.value
     })
   }
+
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()

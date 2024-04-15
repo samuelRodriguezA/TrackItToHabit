@@ -1,10 +1,10 @@
 import React from 'react'
-import Calendar from '../../../../components/Calendars'
+import HomeCalendar from '../../../../components/HomeCalendar'
 
 const CalendarPage = () => {
   return (
     <div>
-      <Calendar/>
+      <HomeCalendar />
     </div>
   )
 }

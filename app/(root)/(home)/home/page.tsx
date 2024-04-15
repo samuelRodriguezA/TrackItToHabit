@@ -1,11 +1,11 @@
-import HomeCalendar from '../../../../components/HomeCalendar'
+import Dashboard from '../../../../components/Dashboard'
 import React from 'react'
 
 const Home = () => {
   return (
-    <section>
-      <HomeCalendar/>
-    </section>
+    <>
+      <Dashboard />
+    </>
   )
 }
 
